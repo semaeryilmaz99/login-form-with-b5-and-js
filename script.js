@@ -11,3 +11,6 @@ let theHobbit = new Book('The Hobbit', 'j. r. Tolkien', '596');
 let theLordOfTheRings = new Book('lotr', 'somebody', '457');
 
 theHobbit.sayTitle();
+theLordOfTheRings.sayTitle();
+
+add some stuff in here 
