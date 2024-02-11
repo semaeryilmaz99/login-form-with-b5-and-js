@@ -23,18 +23,18 @@ function signUp() {
     var password = document.getElementById('password').value;
 
     if (firstName == '' || lastName == '' || userName == '' || email == '' || password == '') {
-        alert('Please write all the necessary informations.');
+        functionAlert('Please write all the necessary informations.');
         return false;
     };
 
     if (password.length < 8) {
 
-        alert("Password must be at least 8 characters");
+        functionAlert("Password must be at least 8 characters");
         return false;
 
     } else if (password.search(/[0-9]/) < 0) {
 
-        alert("Password must contain at least one number");
+        functionAlert("Password must contain at least one number");
         return false;
 
     } else {
@@ -44,4 +44,17 @@ function signUp() {
 
     var kullanici = new User(firstName, lastName, userName, email, password);
     Users.push(kullanici);
+};
+
+var enterPass = document.getElementById('enter-pass').value;
+var enterPassAgain = document.getElementById('enter-pass-again').value;
+var addPassword = document.getElementById('add-password');
+
+function addPassword() {
+    if (enterPass !== enterPassAgain) {
+        alert('Two inputs are not same.');
+    } else {
+        window.location.href = "/website.html";
+        alert('Password selected successfully.');
+    };
 };
