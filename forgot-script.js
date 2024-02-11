@@ -6,7 +6,8 @@ function openModal() {
     if (inputMail == '') {
         alert('Please enter your email address.');
         return false;
-    };
+    } alert('We have send a verify code to your email address.');
+
     openEnterCodeModal.show();
 }
 
@@ -18,6 +19,8 @@ function closeModal() {
 
 function verifyCode() {
     var verifyCode = document.getElementById('input-code').value;
+
+
     if (verifyCode == '') {
         alert('Please enter the code.');
         return false;
@@ -26,7 +29,8 @@ function verifyCode() {
         return false;
     };
     closeModal();
-    window.location.href = "/index.html";
+
+    window.location.href = "/new-password.html";
 };
 
 
