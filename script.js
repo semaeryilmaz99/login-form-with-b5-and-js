@@ -39,7 +39,7 @@ function signUp() {
 
     } else {
         closeModal();
-        login();
+        window.location.href = "/website.html";
 
     };
 
@@ -54,9 +54,13 @@ function addPassword() {
     var enterPassAgain = document.getElementById('enter-pass-again').value;
     if (enterPass != enterPassAgain) {
         alert('Two inputs are different.');
+        return false;
+    } else if (enterPass.length <= 8) {
+        alert('Password must be longer than 8 characters.');
+        return false;
     } else {
+        alert('Password added successfully.')
         window.location.href = "/website.html";
-        alert('Password selected successfully.');
     };
 };
 
