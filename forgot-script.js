@@ -21,11 +21,13 @@ function verifyCode() {
     if (verifyCode == '') {
         alert('Please enter the code.');
         return false;
-    } else if (verifyCode.length < 6) {
-        alert('You did not add all the code.');
+    } else if (verifyCode.length < 6 || verifyCode.length > 6) {
+        alert('Code must be 6 characters.');
         return false;
     };
     closeModal();
-    console.log('you verified your code.')
+    window.location.href = "/index.html";
 };
+
+
 
