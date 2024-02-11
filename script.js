@@ -23,22 +23,23 @@ function signUp() {
     var password = document.getElementById('password').value;
 
     if (firstName == '' || lastName == '' || userName == '' || email == '' || password == '') {
-        functionAlert('Please write all the necessary informations.');
+        alert('Please write all the necessary informations.');
         return false;
     };
 
     if (password.length < 8) {
 
-        functionAlert("Password must be at least 8 characters");
+        alert("Password must be at least 8 characters");
         return false;
 
     } else if (password.search(/[0-9]/) < 0) {
 
-        functionAlert("Password must contain at least one number");
+        alert("Password must contain at least one number");
         return false;
 
     } else {
         closeModal();
+        login();
 
     };
 
@@ -46,15 +47,27 @@ function signUp() {
     Users.push(kullanici);
 };
 
-var enterPass = document.getElementById('enter-pass').value;
-var enterPassAgain = document.getElementById('enter-pass-again').value;
-var addPassword = document.getElementById('add-password');
+
 
 function addPassword() {
-    if (enterPass !== enterPassAgain) {
-        alert('Two inputs are not same.');
+    var enterPass = document.getElementById('enter-pass').value;
+    var enterPassAgain = document.getElementById('enter-pass-again').value;
+    if (enterPass != enterPassAgain) {
+        alert('Two inputs are different.');
     } else {
         window.location.href = "/website.html";
         alert('Password selected successfully.');
     };
+};
+
+function login() {
+    var emailLogin = document.getElementById('email-login').value;
+    var passwordLogin = document.getElementById('password-login').value;
+    if (emailLogin == '' || passwordLogin == '') {
+        alert('You should add all the necessary informations.');
+        return false;
+    };
+    window.location.href = "/website.html";
+    var emailLogin = document.getElementById('email-login').value = '';
+    var passwordLogin = document.getElementById('password-login').value = '';
 };
