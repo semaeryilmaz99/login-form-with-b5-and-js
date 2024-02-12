@@ -75,3 +75,13 @@ function login() {
     var emailLogin = document.getElementById('email-login').value = '';
     var passwordLogin = document.getElementById('password-login').value = '';
 };
+
+// const form = document.querySelector("form")
+
+// form.addEventListener('submit', e => {
+//     if (!form.checkValidity()) {
+//         e.preventDefault()
+//     }
+
+//     form.classList.add('was-validated');
+// })

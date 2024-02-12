@@ -10,12 +10,67 @@ body {
 } 
 
 .right-box {
-    padding: 40px 30px 40px 40px;
+    padding: 110px 30px 80px 50px;
 } 
 
 ::placeholder {
     font-size: 16px;
 } 
+
+.login-message:hover span {
+    display: none;
+}
+
+.login-message:hover:before {
+    content: "We are happy to have you.";
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.forgot-message:hover span {
+    display: none;
+}
+
+.forgot-message:hover:before {
+    content: "Enter your email so we will send you some code to verify.";
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.new-message:hover span {
+    display: none;
+}
+
+.new-message:hover:before {
+    content: "Select the strongest one.";
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }
 
 /* MEDIAQUERIES
 /* for small screens */
@@ -35,3 +90,7 @@ body {
         padding: 20px;
     }
 } 
+
+
+
+

@@ -2,7 +2,7 @@ const openEnterCodeModal = new bootstrap.Modal(document.getElementById('enterCod
 
 function openModal() {
 
-    var inputMail = document.getElementById('input-mail').value;
+    var inputMail = document.getElementById('email').value;
     if (inputMail == '') {
         alert('Please enter your email address.');
         return false;
